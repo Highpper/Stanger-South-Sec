@@ -12,6 +12,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <section class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-brand"><div class="login-mark">SS</div><div><strong>Stanger South</strong><span>School Hub</span></div></div>
+      <p class="eyebrow">WELCOME BACK</p>
+      <h1>Step into your school day.</h1>
+      <p class="login-copy">Sign in to see notices, study resources and updates for your grade group.</p>
+      <form id="loginForm" autocomplete="on">
+        <label>Email address<input id="emailInput" type="email" name="email" autocomplete="username" placeholder="you@example.com" required /></label>
+        <label>Password<input id="passwordInput" type="password" name="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required /></label>
+        <label class="remember-row"><input id="rememberInput" type="checkbox" /> <span>Keep me signed in on this device</span></label>
+        <button class="login-button" type="submit">Sign in <span>→</span></button>
+        <p class="login-message" id="loginMessage" role="status"></p>
+      </form>
+      <p class="security-note">Your password is never stored in this browser. Secure account verification will be connected when the school authentication service is added.</p>
+      <button class="preview-link" id="previewButton" type="button">Preview the hub without signing in</button>
+    </div>
+  </section>
   <div class="app-shell">
     <aside class="sidebar">
       <div class="brand">
@@ -32,27 +49,26 @@
         <button class="nav-item" data-view="sports"><span class="nav-icon">◈</span> Sports & Activities</button>
       </nav>
       <div class="sidebar-bottom">
-        <button class="utility-link" id="toggleTheme"><span>◐</span> Switch appearance</button>
         <button class="utility-link"><span>?</span> Help & contact</button>
-        <div class="profile-mini"><div class="avatar">NM</div><div><strong>Nomsa M.</strong><span>Grade 10A</span></div><span class="dots">•••</span></div>
+        <div class="profile-mini"><div class="avatar" id="profileInitials">LR</div><div><strong id="profileName">Learner</strong><span id="profileRole">School account</span></div><span class="dots">•••</span></div>
       </div>
     </aside>
 
     <main class="main-content">
       <header class="topbar">
-        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu" aria-expanded="false">☰</button>
         <div class="breadcrumb"><span id="dateLine">Monday, 12 August 2024</span><b>/</b><strong id="pageLabel">Home</strong></div>
         <div class="top-actions">
           <label class="search-box"><span>⌕</span><input type="search" placeholder="Search the hub" aria-label="Search the hub" /></label><span class="local-time" id="localTime" title="Time from your device location">00:00</span>
           <button class="icon-button" aria-label="Notifications">♢<i></i></button>
-          <button class="profile-button"><span class="avatar small">NM</span><span>Nomsa</span><span>⌄</span></button>
+          <button class="profile-button"><span class="avatar small" id="topProfileInitials">NM</span><span id="topProfileName">Learner</span><span>⌄</span></button>
         </div>
       </header>
 
       <div class="view-container">
         <section class="view active-view" id="home-view">
           <div class="welcome-row">
-            <div><p class="eyebrow">GOOD MORNING, NOMSA <span>✦</span></p><h1>Rise and shine.</h1><p class="lede">A bright start to a big day at Stanger South.</p></div>
+            <div><p class="eyebrow">GOOD MORNING, <span id="welcomeName">LEARNER</span> <span>✦</span></p><h1>Rise and shine.</h1><p class="lede">A bright start to a big day at Stanger South.</p></div>
             <div class="day-stamp"><strong id="dayNumber">12</strong><span><b id="monthLabel">AUG</b><br /><b id="weekdayLabel">MONDAY</b></span></div>
           </div>
 
@@ -66,13 +82,13 @@
 
           <div class="section-heading"><div><p class="eyebrow">YOUR SCHOOL DAY</p><h2>Keep moving forward</h2></div><button class="ghost-button" data-view="timetable">Full timetable →</button></div>
           <div class="dashboard-grid">
-            <article class="schedule-card card"><div class="card-title"><h3>Up next</h3><span class="live-pill"><i></i> LIVE</span></div><div class="next-class"><div class="time"><strong>09:30</strong><span>10:20</span></div><div class="class-line"></div><div><span class="subject-badge maths">M</span><strong>Mathematics</strong><span class="muted">Room 14 · Mr. Naidoo</span></div></div><div class="schedule-list"><div><span>10:20</span><strong>Break</strong><small>Courtyard</small></div><div><span>10:50</span><strong>English</strong><small>Room 7</small></div></div></article>
+              <article class="schedule-card card"><div class="card-title"><h3>Up next</h3><span class="live-pill"><i></i> LOCAL TIME</span></div><div class="next-class"><div class="time"><strong id="currentClassTime">09:30</strong><span id="nextClassTime">10:20</span></div><div class="class-line"></div><div><span class="subject-badge maths">M</span><strong>Mathematics</strong><span class="muted">Room 14 · Subject teacher</span></div></div><div class="schedule-list"><div><span id="breakTime">10:20</span><strong>Break</strong><small>Courtyard</small></div><div><span>10:50</span><strong>English</strong><small>Room 7</small></div></div></article>
             <article class="events-card card"><div class="card-title"><h3>Coming up</h3><button class="more-button">•••</button></div><div class="event-row"><div class="event-date"><strong>15</strong><span>AUG</span></div><div><strong>Inter-house athletics</strong><p>School grounds · 14:00</p></div><span class="event-arrow">↗</span></div><div class="event-row"><div class="event-date"><strong>21</strong><span>AUG</span></div><div><strong>Grade 10 Natural Sciences test</strong><p>Study hall · 08:00</p></div><span class="event-arrow">↗</span></div><button class="bottom-link">View school calendar <span>→</span></button></article>
             <article class="quote-card card"><span class="quote-mark">“</span><blockquote>Success is the sum of small efforts, repeated day in and day out.</blockquote><p>— Robert Collier</p><div class="quote-dots"><i></i><i class="selected"></i><i></i></div></article>
           </div>
 
           <div class="section-heading news-heading"><div><p class="eyebrow">IN THE COMMUNITY</p><h2>Latest from Stanger South</h2></div><button class="ghost-button" data-view="sports">View all news →</button></div>
-          <div class="news-grid"><article class="news-card featured-news"><div class="news-image athletics"></div><div class="news-body"><span class="tag coral">SPORTS</span><h3>On your marks: athletics season is here</h3><p>Our teams are ready to represent Stanger South with pride.</p><span class="news-meta">3 min read · 09 Aug 2024</span></div></article><article class="news-card"><div class="news-body"><span class="tag green">ACHIEVEMENT</span><h3>Celebrating our young innovators</h3><p>Grade 11 takes top honours at the district expo.</p><span class="news-meta">2 min read · 06 Aug 2024</span></div></article><article class="news-card"><div class="news-body"><span class="tag yellow">SCHOOL LIFE</span><h3>Five ways to make exam prep work</h3><p>Simple habits from the Study Centre.</p><span class="news-meta">4 min read · 02 Aug 2024</span></div></article></div>
+          <div class="news-grid"><article class="news-card featured-news"><div class="news-image athletics"></div><div class="news-body"><span class="tag coral">SPORTS</span><h3>On your marks: athletics season is here</h3><p>Our teams are ready to represent Stanger South with pride.</p><span class="news-meta">3 min read · 09 Aug 2024</span></div></article><article class="news-card"><div class="news-body"><span class="tag green">ACHIEVEMENT</span><h3>Celebrating our young innovators</h3><p>Grade 11 takes top honours at the district expo.</p><span class="news-meta">2 min read · 06 Aug 2024</span></div></article><article class="news-card school-life-card"><div class="news-image classroom"></div><div class="news-body"><span class="tag yellow">SCHOOL LIFE</span><h3>Five ways to make exam prep work</h3><p>Simple habits from the Study Centre.</p><span class="news-meta">4 min read · 02 Aug 2024</span></div></article></div>
         </section>
 
         <section class="view" id="learner-view"><div class="page-intro"><p class="eyebrow">LEARNER HUB</p><h1>Your school life, organised.</h1><p class="lede">Everything you need for Grade 10A, in one calm place.</p></div><div class="hub-layout"><div class="subject-panel card"><div class="card-title"><h3>My subjects</h3><button class="more-button">•••</button></div><div class="subject-list"><div><span class="subject-badge maths">M</span><strong>Mathematics</strong><small>2 tasks due</small><b>›</b></div><div><span class="subject-badge physics">P</span><strong>Physical Sciences</strong><small>All caught up</small><b>›</b></div><div><span class="subject-badge geo">G</span><strong>Geography</strong><small>1 new note</small><b>›</b></div><div><span class="subject-badge english">E</span><strong>English Home Language</strong><small>All caught up</small><b>›</b></div></div></div><div class="task-panel card"><div class="card-title"><h3>Homework tracker</h3><span class="tag yellow">THIS WEEK</span></div><div class="task"><span class="check checked">✓</span><div><strong>Quadratic equations</strong><small>Mathematics · Due today</small></div><span class="done">Done</span></div><div class="task"><span class="check"></span><div><strong>Mapwork: contour lines</strong><small>Geography · Due Thu</small></div><span class="due">Due soon</span></div><div class="task"><span class="check"></span><div><strong>Read chapter 6</strong><small>English · Due Fri</small></div><span class="due">Due Fri</span></div><button class="bottom-link">Open all homework <span>→</span></button></div></div></section>
@@ -85,6 +101,7 @@
       </div>
     </main>
   </div>
+  <button class="menu-backdrop" id="menuBackdrop" aria-label="Close menu"></button>
   <script src="app.js"></script>
 </body>
 </html>
