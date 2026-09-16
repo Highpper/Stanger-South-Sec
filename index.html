@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17433b" />
+  <meta name="description" content="Stanger South School Hub - your school day, in one place." />
+  <title>Stanger South | School Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="school-emblem" role="img" aria-label="Stanger South Secondary School emblem, established 1995, Rise and Shine">
+          <span class="emblem-name">STANGER SOUTH<br />SECONDARY SCHOOL</span>
+          <span class="emblem-est left">Est. 1995</span><span class="emblem-est right">Est. 1995</span>
+          <span class="emblem-rise">▲</span><span class="emblem-learner">●</span><span class="emblem-book">⌄⌃</span>
+          <span class="emblem-banner">RISE AND SHINE</span>
+        </div>
+        <div><strong>Stanger South</strong><span>School Hub</span></div>
+      </div>
+      <div class="school-year">2024 / 2025 <span>●</span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span> Home</button>
+        <button class="nav-item" data-view="learner"><span class="nav-icon">✦</span> Learner Hub</button>
+        <button class="nav-item" data-view="study"><span class="nav-icon">▤</span> Study Centre</button>
+        <button class="nav-item" data-view="timetable"><span class="nav-icon">▦</span> Timetable</button>
+        <button class="nav-item" data-view="sports"><span class="nav-icon">◈</span> Sports & Activities</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="utility-link" id="toggleTheme"><span>◐</span> Switch appearance</button>
+        <button class="utility-link"><span>?</span> Help & contact</button>
+        <div class="profile-mini"><div class="avatar">NM</div><div><strong>Nomsa M.</strong><span>Grade 10A</span></div><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><span id="dateLine">Monday, 12 August 2024</span><b>/</b><strong id="pageLabel">Home</strong></div>
+        <div class="top-actions">
+          <label class="search-box"><span>⌕</span><input type="search" placeholder="Search the hub" aria-label="Search the hub" /></label><span class="local-time" id="localTime" title="Time from your device location">00:00</span>
+          <button class="icon-button" aria-label="Notifications">♢<i></i></button>
+          <button class="profile-button"><span class="avatar small">NM</span><span>Nomsa</span><span>⌄</span></button>
+        </div>
+      </header>
+
+      <div class="view-container">
+        <section class="view active-view" id="home-view">
+          <div class="welcome-row">
+            <div><p class="eyebrow">GOOD MORNING, NOMSA <span>✦</span></p><h1>Rise and shine.</h1><p class="lede">A bright start to a big day at Stanger South.</p></div>
+            <div class="day-stamp"><strong id="dayNumber">12</strong><span><b id="monthLabel">AUG</b><br /><b id="weekdayLabel">MONDAY</b></span></div>
+          </div>
+
+          <div class="hero-grid">
+            <article class="feature-card">
+              <div class="feature-content"><span class="tag light">FROM THE PRINCIPAL</span><h2>Small steps.<br /><em>Big wins.</em></h2><p>“Every lesson is a chance to discover what you are capable of.”</p><button class="text-button">Read the message <span>→</span></button></div>
+              <div class="feature-art"><div class="sun"></div><div class="hill hill-one"></div><div class="hill hill-two"></div><div class="plant">✦</div></div>
+            </article>
+            <article class="notice-card"><div class="card-heading"><span class="tag coral">PINNED NOTICE</span><span class="card-date">Today</span></div><h3>Grade 10 learners</h3><p>Report to the hall at <strong>08:00</strong> tomorrow for subject selection.</p><div class="notice-footer"><span class="avatar-stack"><i>TM</i><i>AD</i></span><span>From Admin Office</span><button aria-label="Open notice">→</button></div></article>
+          </div>
+
+          <div class="section-heading"><div><p class="eyebrow">YOUR SCHOOL DAY</p><h2>Keep moving forward</h2></div><button class="ghost-button" data-view="timetable">Full timetable →</button></div>
+          <div class="dashboard-grid">
+            <article class="schedule-card card"><div class="card-title"><h3>Up next</h3><span class="live-pill"><i></i> LIVE</span></div><div class="next-class"><div class="time"><strong>09:30</strong><span>10:20</span></div><div class="class-line"></div><div><span class="subject-badge maths">M</span><strong>Mathematics</strong><span class="muted">Room 14 · Mr. Naidoo</span></div></div><div class="schedule-list"><div><span>10:20</span><strong>Break</strong><small>Courtyard</small></div><div><span>10:50</span><strong>English</strong><small>Room 7</small></div></div></article>
+            <article class="events-card card"><div class="card-title"><h3>Coming up</h3><button class="more-button">•••</button></div><div class="event-row"><div class="event-date"><strong>15</strong><span>AUG</span></div><div><strong>Inter-house athletics</strong><p>School grounds · 14:00</p></div><span class="event-arrow">↗</span></div><div class="event-row"><div class="event-date"><strong>21</strong><span>AUG</span></div><div><strong>Grade 10 Natural Sciences test</strong><p>Study hall · 08:00</p></div><span class="event-arrow">↗</span></div><button class="bottom-link">View school calendar <span>→</span></button></article>
+            <article class="quote-card card"><span class="quote-mark">“</span><blockquote>Success is the sum of small efforts, repeated day in and day out.</blockquote><p>— Robert Collier</p><div class="quote-dots"><i></i><i class="selected"></i><i></i></div></article>
+          </div>
+
+          <div class="section-heading news-heading"><div><p class="eyebrow">IN THE COMMUNITY</p><h2>Latest from Stanger South</h2></div><button class="ghost-button" data-view="sports">View all news →</button></div>
+          <div class="news-grid"><article class="news-card featured-news"><div class="news-image athletics"></div><div class="news-body"><span class="tag coral">SPORTS</span><h3>On your marks: athletics season is here</h3><p>Our teams are ready to represent Stanger South with pride.</p><span class="news-meta">3 min read · 09 Aug 2024</span></div></article><article class="news-card"><div class="news-body"><span class="tag green">ACHIEVEMENT</span><h3>Celebrating our young innovators</h3><p>Grade 11 takes top honours at the district expo.</p><span class="news-meta">2 min read · 06 Aug 2024</span></div></article><article class="news-card"><div class="news-body"><span class="tag yellow">SCHOOL LIFE</span><h3>Five ways to make exam prep work</h3><p>Simple habits from the Study Centre.</p><span class="news-meta">4 min read · 02 Aug 2024</span></div></article></div>
+        </section>
+
+        <section class="view" id="learner-view"><div class="page-intro"><p class="eyebrow">LEARNER HUB</p><h1>Your school life, organised.</h1><p class="lede">Everything you need for Grade 10A, in one calm place.</p></div><div class="hub-layout"><div class="subject-panel card"><div class="card-title"><h3>My subjects</h3><button class="more-button">•••</button></div><div class="subject-list"><div><span class="subject-badge maths">M</span><strong>Mathematics</strong><small>2 tasks due</small><b>›</b></div><div><span class="subject-badge physics">P</span><strong>Physical Sciences</strong><small>All caught up</small><b>›</b></div><div><span class="subject-badge geo">G</span><strong>Geography</strong><small>1 new note</small><b>›</b></div><div><span class="subject-badge english">E</span><strong>English Home Language</strong><small>All caught up</small><b>›</b></div></div></div><div class="task-panel card"><div class="card-title"><h3>Homework tracker</h3><span class="tag yellow">THIS WEEK</span></div><div class="task"><span class="check checked">✓</span><div><strong>Quadratic equations</strong><small>Mathematics · Due today</small></div><span class="done">Done</span></div><div class="task"><span class="check"></span><div><strong>Mapwork: contour lines</strong><small>Geography · Due Thu</small></div><span class="due">Due soon</span></div><div class="task"><span class="check"></span><div><strong>Read chapter 6</strong><small>English · Due Fri</small></div><span class="due">Due Fri</span></div><button class="bottom-link">Open all homework <span>→</span></button></div></div></section>
+
+        <section class="view" id="study-view"><div class="page-intro"><p class="eyebrow">STUDY CENTRE</p><h1>Make learning stick.</h1><p class="lede">Notes, questions and revision guides built for your next breakthrough.</p></div><div class="study-grid"><button class="study-card subject-maths"><span class="large-letter">M</span><div><span class="tag light">GRADE 10</span><h3>Mathematics</h3><p>Algebra · Functions · Geometry</p></div><span class="study-arrow">↗</span></button><button class="study-card subject-physics"><span class="large-letter">P</span><div><span class="tag light">GRADE 10</span><h3>Physical Sciences</h3><p>Mechanics · Waves · Matter</p></div><span class="study-arrow">↗</span></button><button class="study-card subject-english"><span class="large-letter">E</span><div><span class="tag light">GRADE 10</span><h3>English</h3><p>Language · Literature · Writing</p></div><span class="study-arrow">↗</span></button><button class="study-card subject-life"><span class="large-letter">L</span><div><span class="tag light">GRADE 10</span><h3>Life Sciences</h3><p>Cells · Diversity · Life processes</p></div><span class="study-arrow">↗</span></button><button class="study-card subject-geo"><span class="large-letter">G</span><div><span class="tag light">GRADE 10</span><h3>Geography</h3><p>Maps · Climate · Human geography</p></div><span class="study-arrow">↗</span></button><button class="study-card subject-zulu"><span class="large-letter">iZ</span><div><span class="tag light">GRADE 10</span><h3>isiZulu</h3><p>Ulimi · Izincwadi · Ukubhala</p></div><span class="study-arrow">↗</span></button></div></section>
+
+        <section class="view" id="timetable-view"><div class="page-intro timetable-intro"><div><p class="eyebrow">TIMETABLE</p><h1>Find your flow.</h1><p class="lede">Select your class to see the shape of your week.</p></div><select id="classSelect" aria-label="Select your class"><option>Grade 10A</option><option>Grade 10B</option><option>Grade 11A</option><option>Grade 12A</option></select></div><div class="timetable-wrap card"><div class="timetable-head"><span></span><span>MON 12</span><span>TUE 13</span><span>WED 14</span><span>THU 15</span><span>FRI 16</span></div><div class="timetable-row"><span class="time-label">08:00 <small>50 min</small></span><div class="lesson green-lesson">Assembly<small>Hall</small></div><div class="lesson blue-lesson">Mathematics<small>Room 14</small></div><div class="lesson coral-lesson">English<small>Room 7</small></div><div class="lesson green-lesson">Geography<small>Room 12</small></div><div class="lesson yellow-lesson">Life Orientation<small>Room 3</small></div></div><div class="timetable-row"><span class="time-label">08:50 <small>50 min</small></span><div class="lesson blue-lesson">Mathematics<small>Room 14</small></div><div class="lesson purple-lesson">Physical Sciences<small>Lab 2</small></div><div class="lesson green-lesson">Geography<small>Room 12</small></div><div class="lesson coral-lesson">English<small>Room 7</small></div><div class="lesson blue-lesson">Mathematics<small>Room 14</small></div></div><div class="break-row"><span>09:40</span><strong>BREAK</strong><span>Head outside. Stretch. Reset.</span></div><div class="timetable-row"><span class="time-label">10:10 <small>50 min</small></span><div class="lesson coral-lesson">English<small>Room 7</small></div><div class="lesson green-lesson">Life Sciences<small>Lab 1</small></div><div class="lesson yellow-lesson">isiZulu<small>Room 5</small></div><div class="lesson blue-lesson">Mathematics<small>Room 14</small></div><div class="lesson purple-lesson">Physical Sciences<small>Lab 2</small></div></div><div class="timetable-row"><span class="time-label">11:00 <small>50 min</small></span><div class="lesson yellow-lesson">isiZulu<small>Room 5</small></div><div class="lesson coral-lesson">English<small>Room 7</small></div><div class="lesson blue-lesson">Mathematics<small>Room 14</small></div><div class="lesson green-lesson">Life Sciences<small>Lab 1</small></div><div class="lesson green-lesson">Geography<small>Room 12</small></div></div><div class="break-row lunch"><span>11:50</span><strong>LUNCH</strong><span>See you at the courts.</span></div><div class="timetable-row"><span class="time-label">12:40 <small>50 min</small></span><div class="lesson purple-lesson">Physical Sciences<small>Lab 2</small></div><div class="lesson yellow-lesson">Life Orientation<small>Room 3</small></div><div class="lesson green-lesson">Life Sciences<small>Lab 1</small></div><div class="lesson yellow-lesson">isiZulu<small>Room 5</small></div><div class="lesson coral-lesson">English<small>Room 7</small></div></div></div></section>
+
+        <section class="view" id="sports-view"><div class="page-intro"><p class="eyebrow">SPORTS & ACTIVITIES</p><h1>Find your team.</h1><p class="lede">Show up, give your best, and enjoy the game.</p></div><div class="sports-feature"><div><span class="tag light">THIS WEEK</span><h2>Inter-house athletics</h2><p>Thursday · 15 August · School grounds</p><button class="text-button">See fixtures <span>→</span></button></div><div class="sports-art"><span>RUN<br />YOUR<br /><em>RACE</em></span></div></div><div class="section-heading"><div><p class="eyebrow">ON THE BOARD</p><h2>Fixtures & results</h2></div><button class="ghost-button">All fixtures →</button></div><div class="fixture-list card"><div class="fixture-row"><div class="fixture-date"><strong>15</strong><span>AUG</span></div><div><strong>SSS Lions <small>vs</small> Mandeni High</strong><p>U16 Boys Football · Home ground</p></div><span class="fixture-status upcoming">UPCOMING</span><b>›</b></div><div class="fixture-row"><div class="fixture-date"><strong>08</strong><span>AUG</span></div><div><strong>SSS Netball <small>vs</small> Stanger Manor</strong><p>U15 Girls Netball · Away</p></div><span class="fixture-status won">WON 24–18</span><b>›</b></div></div></section>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
